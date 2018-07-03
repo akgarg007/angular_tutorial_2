@@ -7,19 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ToDo Tasks List';
-  taskList= [];
+  taskList = [];
   task = '';
 
   addTask() {
-    if(this.task !== '')
-    {
+    if (this.task !== '') {
       this.taskList.push(this.task);
       this.task = '';
     }
   }
 
   // splice function removes element from the array of the given index
-  removeTask(index){
+  removeTask(index) {
     this.taskList.splice(index , 1);
   }
 
